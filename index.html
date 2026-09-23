@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 導入bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- 將導覽列固定在上方，fixed-top，https://bootstrap5.hexschool.com/docs/5.1/helpers/position/-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">偉琤作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">機票</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">訂房</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            旅遊
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">國內旅遊</a></li>
+                            <li><a class="dropdown-item" href="#">海外旅遊</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 輪播 (Carousel) -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <!-- 輪播圖片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/tour1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/tour2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/tour3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- 最新消息 alert -->
+    <!-- 上方、左右設margin，mt-3 mx-3，https://bootstrap5.hexschool.com/docs/5.1/utilities/spacing/ -->
+    <div class="alert mt-3 mx-3 alert-primary" role="alert">
+        A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+    <div class="alert mt-3 mx-3 alert-secondary" role="alert">
+        A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+    <div class="alert mt-3 mx-3 alert-success" role="alert">
+        A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+    <div class="alert mt-3 mx-3 alert-danger" role="alert">
+        A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+    <!-- 卡片 -->
+    <!-- table的概念 -->
+    <!-- 左右maigin，mx-3 -->
+    <div class="mx-3">
+        <!-- 使用row將每個卡片div包起來，row(12等份)依比例設定-->
+        <!-- 設定按鈕寬度，w-100，https://bootstrap5.hexschool.com/docs/5.1/utilities/sizing/ -->
+        <!-- 底部maigin，mb-3 -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card">
+                    <img src="./images/photo1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary w-100">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card">
+                    <img src="./images/photo2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary w-100">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card">
+                    <img src="./images/photo3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary w-100">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card">
+                    <img src="./images/photo4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary w-100">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 版權聲明 -->
+    <!-- 水平線 -->
+    <!-- 靠左/靠右，https://bootstrap5.hexschool.com/docs/5.1/utilities/float/ -->
+    <footer class="mx-3">
+        <hr>
+        <p class="float-start">
+            &copy;2026.09.侏儸紀旅行社
+            <a href="#">隱私權</a>
+            <a href="#">聯絡我們</a>
+        </p>
+        <p class="float-end">
+            <a href="#">回到頂部</a>
+        </p>
+    </footer>
+    <!-- bs JS -->
+    <!-- 導入bootstrap JS -->
+    <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>
